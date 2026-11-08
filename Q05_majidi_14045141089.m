@@ -1,0 +1,13 @@
+clear
+clc
+a=10*rand(4);
+disp(a);
+M=max(max(a));
+m=min(min(a));
+[a1,b1]=find(a==M);
+[a2,b2]=find(a==m);
+d=a(a1,b1);
+a(a1,b1)=a(a2,b2);
+a(a2,b2)=d;
+fprintf('__________________________________________\n');
+disp(a);
